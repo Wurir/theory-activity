@@ -1,0 +1,9 @@
+section {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section > article {
+    width: calc(50% - 30px);
+    margin: 20px 0;
+}

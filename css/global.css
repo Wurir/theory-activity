@@ -4,18 +4,15 @@
     box-sizing: border-box;
 }
 
-p {
-    width: 300px;
+section {
+    position: relative;
 }
 
-p::before {
-    background-color: #ffffba;
-    border-radius: 50%;
-    content: '';
-    display: block;
-    height: 100px;
-    width: 100px;
-    float: left;
-    shape-outside: circle();
-    margin-right: 20px;
+div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: clamp(16px, 2vw + 1rem, 30px);
 }

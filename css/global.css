@@ -22,3 +22,11 @@
     margin: 5px;
     border: 1px solid black;
 }
+
+.center {
+    align-self: stretch;
+    justify-self: stretch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

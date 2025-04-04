@@ -6,7 +6,7 @@
     border: 1px solid red;
     display: grid;
     height: 100vh;
-    grid-template-columns: 1fr 200px;
+    grid-template-columns: minmax(min-content, max-content);
     grid-template-rows: 50px 1fr 50px 50px;
     grid-template-areas: 
     "header header"

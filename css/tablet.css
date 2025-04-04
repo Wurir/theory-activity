@@ -1,13 +1,9 @@
-header {
+section {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-evenly;
 }
 
-header ul {
-    display: flex;
-}
-
-header label {
-    display: none;
+section > article {
+    margin: 20px 0;
+    width: calc(50% - 30px);
 }

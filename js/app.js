@@ -1,12 +1,17 @@
-console.log('JavaScript');
-console.log('jest');
-console.log('COOL');
+let empty
+// deklaracja zmiennej bez przypisania
+// taka zmienna ma wartość undefined
 
-const str = 'wartość typu string'
-const sum = 1 + 2 // komentarz w JS
+var num = 22
+// zmienna deklarowana przy pomocy słowa kluczowego var (starsze rozwiązanie)
+// z przypisaniem wartosci liczbowej (number)
 
+const str = 'jakiś ciąg zniaków'
+// deklaracje przy użyciu const
+//rozwiązanie wprowadzone przy wersji ES6
+// z przypisaniem wartości typu string
 
-console.log('wyświetlam', str);
-console.log('wyświetlam również liczbę', sum);
-
-alert('JS działa!')
+let arr = []
+// deklraracja przy użyciu let
+// rozwiązanie wprowadzone wraz z ES6
+// z przypisaniem pustej tablicy

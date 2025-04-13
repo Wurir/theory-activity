@@ -1,13 +1,14 @@
-const tmp = 1234
-// nazwa zmiennej nie mowi co przechowujemy
-// nie wiemy czy to temperatura czy moze zmienna tymczasowa
+var num = 222;
+const str = 'jakiś ciąg znaków';
+let arr = [];
 
-let 01step
-let first-name
-let user.age
-// jesli bedziemy blednie nazywac zmienne
-// to czesto IDE zwroci nam na to uwage poprzez dziwne kolorowanie
+num = 1 + 2
+// zmienna została już zadeklarowana więc nie musimy ponownie używać var, przechowywana wartość to 3
 
-console.log(TMP);
-// nie ma takiej zmiennej!
-// istnieje jedynie tmp (małymi literami)
+str = 'nowy tekst'
+// ten kod spowoduje błąd! zmienne zadeklarowane za pomocą słowa kluczowego const, nie mogą byc nadpisywane
+
+arr.push(11)
+// do pustej tablicy dodaje element, w tym przypadku jest to liczba (typ number)
+// która dodawana jest za pomocą metody .push()
+// tak nazywamy funkcję w obiekcie

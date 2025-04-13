@@ -1,17 +1,7 @@
-let empty
-// deklaracja zmiennej bez przypisania
-// taka zmienna ma wartość undefined
+const firstName = 'Mateusz'
+const lastName = 'Kowalski'
 
-var num = 22
-// zmienna deklarowana przy pomocy słowa kluczowego var (starsze rozwiązanie)
-// z przypisaniem wartosci liczbowej (number)
+const fieldName = 'age'
+const userAge = 18
 
-const str = 'jakiś ciąg zniaków'
-// deklaracje przy użyciu const
-//rozwiązanie wprowadzone przy wersji ES6
-// z przypisaniem wartości typu string
-
-let arr = []
-// deklraracja przy użyciu let
-// rozwiązanie wprowadzone wraz z ES6
-// z przypisaniem pustej tablicy
+let userPoints = 123

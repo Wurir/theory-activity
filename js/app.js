@@ -1,7 +1,13 @@
-const firstName = 'Mateusz'
-const lastName = 'Kowalski'
+const tmp = 1234
+// nazwa zmiennej nie mowi co przechowujemy
+// nie wiemy czy to temperatura czy moze zmienna tymczasowa
 
-const fieldName = 'age'
-const userAge = 18
+let 01step
+let first-name
+let user.age
+// jesli bedziemy blednie nazywac zmienne
+// to czesto IDE zwroci nam na to uwage poprzez dziwne kolorowanie
 
-let userPoints = 123
+console.log(TMP);
+// nie ma takiej zmiennej!
+// istnieje jedynie tmp (małymi literami)

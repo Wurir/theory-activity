@@ -1,14 +1,13 @@
-var num = 222;
-const str = 'jakiś ciąg znaków';
-let arr = [];
+const basket1 = 2785.12
+const basket2 = 451.88
+const basket3 = 4764
 
-num = 1 + 2
-// zmienna została już zadeklarowana więc nie musimy ponownie używać var, przechowywana wartość to 3
+const sum = basket1 + basket2 + basket3
+// obliczam sume wszystkich zakupów
 
-str = 'nowy tekst'
-// ten kod spowoduje błąd! zmienne zadeklarowane za pomocą słowa kluczowego const, nie mogą byc nadpisywane
+const avg = sum / 3
+// potem dopiero dziele przez ich ilość
 
-arr.push(11)
-// do pustej tablicy dodaje element, w tym przypadku jest to liczba (typ number)
-// która dodawana jest za pomocą metody .push()
-// tak nazywamy funkcję w obiekcie
+console.log(avg);
+// wyswietlam w konsoli zawartość zmiennej avg
+// oczywiście będzie to średnia arytmetyczna

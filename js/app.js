@@ -1,16 +1,11 @@
-let myVar = null
-let myObj = {}
+const billion = 1_000_000_000; 
+// 1000000000
 
-console.log(typeof myVar, typeof myObj);
-// object object
+let onemillionth = 0.000_001; 
+// 0.000001
 
-console.log(myVar === null, myObj === null);
-// true false
+var bigint = 134_656_765_765_783n 
+// 134656765765783n
 
-console.log(typeof myVar === 'object', typeof myObj === 'object');
-// true true
-
-if(typeof myVar === 'object') {
-    myVar.prop = 'value'
-}
-// cannot set property 'prop' of null
+const binary = 11_0000_0100_0010 
+// 11000001000010

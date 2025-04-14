@@ -1,13 +1,10 @@
-const basket1 = 2785.12
-const basket2 = 451.88
-const basket3 = 4764
+var num = 2;
+//nadal działa i bedzie działać, jednak jest uważane za przestarzałe
 
-const sum = basket1 + basket2 + basket3
-// obliczam sume wszystkich zakupów
+let number = 44;
+// jeśli wartość zmiennej będzie nadpisywana, należy użyć słowa kluczowego let
 
-const avg = sum / 3
-// potem dopiero dziele przez ich ilość
-
-console.log(avg);
-// wyswietlam w konsoli zawartość zmiennej avg
-// oczywiście będzie to średnia arytmetyczna
+const pi = 3.14
+// jeśli nie będziemy zmieniać wartości lub nie zamierzamy tego robic
+// to należy użyć słowa kluczowego const
+// w pierwszej kolejności wybieramy tą wersję, ponieważ odczytywanie tej wartości będzie szybsze

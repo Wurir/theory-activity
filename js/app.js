@@ -1,11 +1,18 @@
-const billion = 1_000_000_000; 
-// 1000000000
+const name  = 'Agnieszka'
+console.log(name.length);
+// 9
 
-let onemillionth = 0.000_001; 
-// 0.000001
+const nameUpper = name.toUpperCase()
+console.log(nameUpper);
+// AGNIESZKA
 
-var bigint = 134_656_765_765_783n 
-// 134656765765783n
+const price = 5.952
+console.log(price);
+// 5.952
 
-const binary = 11_0000_0100_0010 
-// 11000001000010
+const priceFixed = price.toFixed(2)
+console.log(priceFixed);
+// 5.95
+console.log(typeof priceFixed);
+// string
+

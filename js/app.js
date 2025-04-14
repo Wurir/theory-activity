@@ -1,29 +1,27 @@
-let x = 12;
-x += '0'; 
-// x = 12 + '0';
-console.log(x);
-// '120' (string)
+console.log('0' == 0); 
+// true,
+// bo '0' => 0, 0 === 0
 
-x -= 100; 
-// x = 120 - 100;
-console.log(x); 
-// 20
+console.log(0 == false); 
+// true
+// bo false => 0, 0 === 0
 
-x *= 'a'; 
-// x = 20 * 'a';
-console.log(x); 
-// NaN
+console.log(false == '0'); 
+// true
+// bo false => 0 & '0' => 0, 0 === 0
+// jeśli mamy luźne (loose) porównanie tj. ==
+// JS używa niejawnej konwersji, aby wartości
+// sprowadzić do tego samego typu
+// i dopiero potem porównać
 
-x = 1000;
-console.log(x); 
-// 1000
+console.log('0' === 0); 
+// false
 
-x /= 'b'; 
-// x = 1000 / 'b'
-console.log(x); 
-// NaN
-// jeśli wykorzystalibyśmy
-// słowo kluczowe const
-// to pojawiłby się błąd
-// ponieważ ta zmienna
-// nie może być nadpisana
+console.log(0 === false); 
+// false
+
+console.log(false === '0');
+ // false
+// w przypadku tzw. ścisłego (strict) porównania
+// tj. użycia === typ wartości musi się zgadzać
+// jeśli tak nie jest już mamy fałsz

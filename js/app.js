@@ -1,14 +1,29 @@
-let res; 
-// undefined
-// zadeklarowana zmienna,
-// do której nie przypisałem wartości;
-// posiada ona wartość specjalną undefined
+let x = 12;
+x += '0'; 
+// x = 12 + '0';
+console.log(x);
+// '120' (string)
 
+x -= 100; 
+// x = 120 - 100;
+console.log(x); 
+// 20
 
-res = 4; // 4
-res -= 2; // 4 - 2 = 2
-res *= 3; // 2 * 3 = 6
-res /= 2; // 6 / 2 = 3
-res %= 2; // 3 % 2 = 1
+x *= 'a'; 
+// x = 20 * 'a';
+console.log(x); 
+// NaN
 
-console.log(res);
+x = 1000;
+console.log(x); 
+// 1000
+
+x /= 'b'; 
+// x = 1000 / 'b'
+console.log(x); 
+// NaN
+// jeśli wykorzystalibyśmy
+// słowo kluczowe const
+// to pojawiłby się błąd
+// ponieważ ta zmienna
+// nie może być nadpisana

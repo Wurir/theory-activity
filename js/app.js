@@ -1,17 +1,9 @@
-const name  = 'Agnieszka'
-const nameObj = new String('Agnieszka')
-console.log(name.length, nameObj.length);
-// 9 9
+const txt = '245.65'
+const numInt = parseInt(txt)
+const numFloat = parseFloat(txt)
 
-const nameUpper = name.toUpperCase()
-const nameObjUpper = nameObj.toLocaleUpperCase()
-console.log(nameUpper, nameObjUpper);
-// AGNIESZKA AGNIESZKA
+// JS nie rozróżnia wartości całkowitych (integer/int) oraz rzeczywistych (float)
+// jednak możemy "obciąć" wartości po przecinku (kropce)
 
-const price = 5.952
-const priceObj = new Number(5.952)
-console.log(price.toFixed(2), priceObj.toFixed(2));
-// 5.95 5.95
-console.log(typeof price, typeof priceObj);
-// number object
-
+console.log(numInt, typeof numInt, numFloat, typeof numFloat);
+// 245 number 245.65 number

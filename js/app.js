@@ -1,10 +1,12 @@
-var num = 2;
-//nadal działa i bedzie działać, jednak jest uważane za przestarzałe
+const rateFromUsdToPln = 3.80
+const rateFromGbpToPln = 5.02
+const valueUsd = 223
+const valueGbp = 121
+let pln
 
-let number = 44;
-// jeśli wartość zmiennej będzie nadpisywana, należy użyć słowa kluczowego let
+pln = valueUsd * rateFromUsdToPln
+console.log('Wartość dolarów to: ', pln);
 
-const pi = 3.14
-// jeśli nie będziemy zmieniać wartości lub nie zamierzamy tego robic
-// to należy użyć słowa kluczowego const
-// w pierwszej kolejności wybieramy tą wersję, ponieważ odczytywanie tej wartości będzie szybsze
+pln = valueGbp * rateFromGbpToPln
+console.log('Wartość funtów to: ', pln);
+

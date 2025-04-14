@@ -1,19 +1,16 @@
-var num = 222;
-console.log(typeof num);
-// number
+let myVar = null
+let myObj = {}
 
-const str = 'jakiś ciąg znaków'
-console.log(typeof str);
-// string
+console.log(typeof myVar, typeof myObj);
+// object object
 
-let arr = []
-const arrType = typeof arr
-console.log(arrType);
-// object
+console.log(myVar === null, myObj === null);
+// true false
 
-const fn = function() {
-    // useless funkcja
+console.log(typeof myVar === 'object', typeof myObj === 'object');
+// true true
+
+if(typeof myVar === 'object') {
+    myVar.prop = 'value'
 }
-const fnType = typeof fn
-console.log(fnType);
-// function
+// cannot set property 'prop' of null

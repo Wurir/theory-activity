@@ -13,3 +13,4 @@ console.log( x < y && x > y);
 console.log( x < y || x > y);
 // true
 
+// strona 53

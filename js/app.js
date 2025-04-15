@@ -1,12 +1,20 @@
-const userAge = prompt('Ile masz lat?', 0)
+let value
 
-const userAgeInt = parseInt(userAge)
-
-const isAdult = userAgeInt >= 18
-
-if(!isAdult) {
-
-    const leftAge = 18 - userAge
-
-    alert('Do pełnoletności brakuję Ci: ' + leftAge)
+value = ''
+console.log(value);
+if(value) {
+    console.log('prawda!');
+}else {
+    console.log('fałsz!');   
 }
+
+// '' => 'fałsz!'
+
+value = '0'
+console.log(value);
+if(value) {
+    console.log('prawda!');
+}else {
+    console.log('fałsz!');   
+}
+// '0' => 'prawda!'

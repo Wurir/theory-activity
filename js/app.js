@@ -1,7 +1,11 @@
-const userAge =  prompt('Ile masz lat?', 0)
+const a = 12
+const b = 55
+const c = 19
 
-const userAgeInt = parseInt(userAge)
-
-if(userAgeInt >= 18) {
-    alert('Gratuluje, jestes pełnoletni!')
+if(a > b && a > c) {
+    console.log('a jest największe!')
+} else if (b > c) {
+    console.log('b jest największe!');
+}else {
+    console.log('c jest największe!'); 
 }

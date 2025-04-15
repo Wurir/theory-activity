@@ -1,16 +1,10 @@
-const weather = 'deszcz'
-let place
+const userAge = prompt('Ile masz lat?', 0)
 
-if(weather === 'deszcz') {
-    place = 'home'
-}
-console.log(place);
+const userAgeInt = parseInt(userAge)
 
-const winner = 'ja'
-let building
-if(winner === 'ja'){
-    building = 'home'
+if(userAgeInt >= 18) {
+    alert('Jesteś pełnoletni! Gratuluję!')
 } else {
-    building = 'flat'
+    const leftAge = 18 -userAge
+    alert('Do pełnoletności brakuję Ci: ' + leftAge + ' lat')
 }
-console.log(building);

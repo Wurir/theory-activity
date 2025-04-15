@@ -1,20 +1,16 @@
-const x = 7
-const y = 1
-const min = 4
-const max = 10
+const weather = 'deszcz'
+let place
 
+if(weather === 'deszcz') {
+    place = 'home'
+}
+console.log(place);
 
-console.log( x >= min && x <= max);
-// true
-
-console.log(y >= min && y <= max);
-// false
-
-console.log( x < min || x >= max);
-// false
-
-console.log( !(x === y));
-// true
-
-// with && both arguments have to pass
-// with || one of arguments have to pass
+const winner = 'ja'
+let building
+if(winner === 'ja'){
+    building = 'home'
+} else {
+    building = 'flat'
+}
+console.log(building);

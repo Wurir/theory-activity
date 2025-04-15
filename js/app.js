@@ -16,3 +16,5 @@ console.log( x < min || x >= max);
 console.log( !(x === y));
 // true
 
+// with && both arguments have to pass
+// with || one of arguments have to pass

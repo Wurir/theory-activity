@@ -1,13 +1,16 @@
-for(let i=1; i<=100;i++){
-    if(i % 3 === 0) {
-        console.log(i);
-    }
+const randomNumber = Math.round(Math.random() * 5)
+// losuje liczbe z przedzialu od 0 do 5
+
+let userNumber
+// deklaruje zmienna, ktora będzie przechowywać liczbę wprowadzoną przez użytkownika
+
+let counter = 0
+// liczba wykonywanych prób
+
+// wykonuj pętle dopóki wylosowa liczba będzie różna od tej wprowadzonej przez uzytkownika
+while(randomNumber !== userNumber) {
+    userNumber = parseInt(prompt('Zgadnij liczbę!'))
+    counter++
 }
 
-console.log('break');
-
-
-for(let i=3; i<=100; i=i+3) {
-    console.log(i);
-    
-}
+alert('Gratuluję! Zgadłeś za '+counter+' razem!')

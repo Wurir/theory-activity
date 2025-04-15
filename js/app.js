@@ -12,3 +12,8 @@ const numsAreEven2 = !(a % 2) && !(b & 2) ? 'yes': 'no'
 
 console.log(numsAreEven1, numsAreEven2);
 // no no
+
+const isEven = a % 2 === 0 ? true : false
+// krocej: const isEven = a % 2 === 0
+console.log(isEven);
+// true

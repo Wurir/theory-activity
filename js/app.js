@@ -5,10 +5,8 @@ function showInfo(){
 }
 showInfo()
 
-function showNumbers() {
-    const a = 2;
-    const b = 4;
+function showNumbers(a, b) {
     console.log(a + b);
 }
 
-showNumbers()
+showNumbers(2, 4)

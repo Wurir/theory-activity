@@ -1,9 +1,7 @@
-function showInfo(){
-    console.log('Funkcje');
-    console.log('są');
-    console.log('fajne!');
+function showInfo(text){
+    console.log(text);
 }
-showInfo()
+showInfo('hello')
 
 function showNumbers(a, b) {
     console.log(a + b);

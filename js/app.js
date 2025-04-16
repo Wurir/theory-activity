@@ -1,9 +1,16 @@
-function sum(a, b) {
-    const result = a + b
-    return result
+function isEven(num) {
+    if(num % 2 === 0) {
+        return true
+    }
+    return false
 }
 
-const res1 = sum(4, 5)
-const res2 = sum(11, 44)
+function showEvenNumbers(start, stop) {
+    for(let i=start; i<stop; i++){
+        if(isEven(i)){
+            console.log(i + ' jest parzysta!');  
+        }
+    }
+}
 
-console.log(res1, res2);
+showEvenNumbers(1, 10)

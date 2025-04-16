@@ -1,13 +1,10 @@
-let i = 3
-while(i<=100) {
-    console.log(i);
-    i += 3
-}
+const randomNumber = Math.round(Math.random() * 20);
+console.log(randomNumber);
 
-let j = 1
-while(j<=100){
-    if (j % 3 === 0) {
-        console.log(j);
+if(randomNumber >= 5){
+    for(i = 5; i <= randomNumber; i++){
+        console.log(i);     
     }
-    j++
+} else {
+    console.log("Wylosowana liczba jest zbyt mała, aby użyć pętli");
 }

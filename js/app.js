@@ -1,10 +1,9 @@
-function showInfo(text){
-    console.log(text);
-}
-showInfo('hello')
-
-function showNumbers(a, b) {
-    console.log(a + b);
+function sum(a, b) {
+    const result = a + b
+    return result
 }
 
-showNumbers(2, 4)
+const res1 = sum(4, 5)
+const res2 = sum(11, 44)
+
+console.log(res1, res2);

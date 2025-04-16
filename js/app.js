@@ -1,16 +1,10 @@
-const x = 5;
-let result = 0;
+const x = 10;
+let iteration = 0;
+let randomNumber = -1;
 
-for(let i=1; i <= x; i++) {
-    result = result + i
-    console.log(result);
+while(x !== randomNumber){
+    randomNumber = Math.round(Math.random() * 20)
+    iteration++
 }
 
-
-let result2 = 0;
-let j = 1
-while(j <= x){
-    result2 = result2 + j
-    console.log(result2);
-    j++
-}
+console.log(iteration);

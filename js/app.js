@@ -1,10 +1,14 @@
-const x = 10;
-let iteration = 0;
-let randomNumber = -1;
+function showInfo(){
+    console.log('Funkcje');
+    console.log('są');
+    console.log('fajne!');
+}
+showInfo()
 
-while(x !== randomNumber){
-    randomNumber = Math.round(Math.random() * 20)
-    iteration++
+function showNumbers() {
+    const a = 2;
+    const b = 4;
+    console.log(a + b);
 }
 
-console.log(iteration);
+showNumbers()

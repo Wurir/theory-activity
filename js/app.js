@@ -1,6 +1,6 @@
-const getUserInput = function(message){
-    return prompt(message)
-}
+// const getUserInput = function(message){
+//     return prompt(message)
+// }
 
 const sumNumbersFromUser = function(userInputFn){ // funkcja jako parametr
     const a = userInputFn('Podaj liczbę a') // callback, wywołanie fn wewnatrz fn
@@ -10,6 +10,9 @@ const sumNumbersFromUser = function(userInputFn){ // funkcja jako parametr
     return sum
 }
 
-const result = sumNumbersFromUser(getUserInput)
+const result = sumNumbersFromUser(function(message) {
+    return prompt(message)
+})
 
 console.log(result);
+1

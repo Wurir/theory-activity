@@ -1,10 +1,13 @@
 let counter = 1
+let idInterval
 
 const showCounter = function() {
     console.log(counter);
     counter++
+    if(counter > 5) {
+        clearInterval(idInterval)
+    }
 }
 
-console.log('before setInterval()');
-setInterval(showCounter, 1000)
-console.log('after setInterval()');
+
+idInterval = setInterval(showCounter, 1000)

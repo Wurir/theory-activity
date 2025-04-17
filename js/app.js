@@ -1,14 +1,10 @@
-function showMessage() {
-    console.log('SetTimeout');
+let counter = 1
+
+const showCounter = function() {
+    console.log(counter);
+    counter++
 }
 
-const showName = function(){
-    console.log('Michał');
-}
-
-setTimeout(showMessage, 1000)
-setTimeout(showName, 2000)
-
-setTimeout(function(){
-    console.log('funkcja anonimowa!');
-}, 5000)
+console.log('before setInterval()');
+setInterval(showCounter, 1000)
+console.log('after setInterval()');

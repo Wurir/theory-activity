@@ -1,19 +1,22 @@
-// Tym razem Twoja funkcja ma być zadeklarowana w postaci anonimowego wyrażenia funkcyjnego.
-// Niech funkcja ta przyjmuje jeden parametr, który będzie określał, do jakiej liczby ma zostać wykonane sumowanie. 
-// Jeśli parametr będzie równy 4, to funkcja ma zwrócić wartość 10 ponieważ 1+2+3+4=10. Jak już pewnie się domyślasz, wewnątrz funkcji należy użyć pętli for.
-// Pamiętaj, że funkcja ma zwrócić wynik, dlatego należy użyć return. Dopiero potem zwrócona wartość ma zostać wyświetlona w konsoli.
-// PS. Pamiętaj, aby zawsze odpowiednio nazywać funkcje. Nazwa ma jednoznacznie określać, jakie zadanie dana funkcja realizuje.
+// Tym razem Twoim zadaniem jest zadeklarowanie funkcji o nazwie runTimer, która ma wyświetlać w konsoli godzinę aktualizowaną co 5 sekund.
+// Jak zapewne się już domyślasz, należy użyć funkcji czasu, np. setInterval(), która przyjmie jako parametr funkcję anonimową. Funkcja ta ma wyświetlać w konsoli aktualny czas.
+// Dodatkowo po wyświetleniu 5 kolejnych wartości aktualnego czasu należy zatrzymać wyświetlanie. W tym celu stwórz dodatkową zmienną, która będzie zliczać ilość wyświetlanych informacji.
+// Pamiętaj, że funkcja setInterval() zwraca identyfikator, który pozwoli Ci zatrzymać interwał.
+
+let idInterval
 
 
-
-const sumOfAdding = function(num) {
-    let sum = 0
-    for(let i = 1; i <= num; i++) {
-        sum = sum + i
-    }
-    return sum
+const runTimer = function() {
+    let counter = 0
+    idInterval = setInterval(function(){
+        if(counter >= 5) {
+            clearInterval(idInterval)
+        }else {
+            const time = (new Date()).toLocaleTimeString();
+            console.log(time);
+            counter++
+        }
+    }, 5000)
 }
 
-const result = sumOfAdding(4)
-
-console.log(result); // 10
+runTimer()

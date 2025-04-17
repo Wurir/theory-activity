@@ -1,10 +1,19 @@
-// Napisz funkcję o nazwie sayHello. Niech przyjmuje ona przez parametr imię osoby, z którą mamy się przywitać.
-// Uruchomienie funkcji w sposób sayHello('devmentor.pl') ma spowodować wyświetlenie w konsoli napisu: Cześć devmentor.pl!.
+// Tym razem Twoja funkcja ma być zadeklarowana w postaci anonimowego wyrażenia funkcyjnego.
+// Niech funkcja ta przyjmuje jeden parametr, który będzie określał, do jakiej liczby ma zostać wykonane sumowanie. 
+// Jeśli parametr będzie równy 4, to funkcja ma zwrócić wartość 10 ponieważ 1+2+3+4=10. Jak już pewnie się domyślasz, wewnątrz funkcji należy użyć pętli for.
+// Pamiętaj, że funkcja ma zwrócić wynik, dlatego należy użyć return. Dopiero potem zwrócona wartość ma zostać wyświetlona w konsoli.
+// PS. Pamiętaj, aby zawsze odpowiednio nazywać funkcje. Nazwa ma jednoznacznie określać, jakie zadanie dana funkcja realizuje.
 
 
-const sayHello = function(name) {
-    console.log('Cześć ' + name);
-    
+
+const sumOfAdding = function(num) {
+    let sum = 0
+    for(let i = 1; i <= num; i++) {
+        sum = sum + i
+    }
+    return sum
 }
 
-sayHello('devmentor.pl')
+const result = sumOfAdding(4)
+
+console.log(result); // 10

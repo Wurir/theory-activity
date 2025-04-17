@@ -1,4 +1,4 @@
-const fn = function getUserInput(messageForUser){
+const fn = function(messageForUser){
     const userInput = prompt(messageForUser)
     return userInput
 }

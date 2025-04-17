@@ -1,18 +1,14 @@
-// const getUserInput = function(message){
-//     return prompt(message)
-// }
-
-const sumNumbersFromUser = function(userInputFn){ // funkcja jako parametr
-    const a = userInputFn('Podaj liczbę a') // callback, wywołanie fn wewnatrz fn
-    const b = userInputFn('Podaj liczbę b')
-
-    const sum = parseFloat(a) + parseFloat(b)
-    return sum
+function showMessage() {
+    console.log('SetTimeout');
 }
 
-const result = sumNumbersFromUser(function(message) {
-    return prompt(message)
-})
+const showName = function(){
+    console.log('Michał');
+}
 
-console.log(result);
-1
+setTimeout(showMessage, 1000)
+setTimeout(showName, 2000)
+
+setTimeout(function(){
+    console.log('funkcja anonimowa!');
+}, 5000)

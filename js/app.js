@@ -1,22 +1,20 @@
-// Tym razem Twoim zadaniem jest zadeklarowanie funkcji o nazwie runTimer, która ma wyświetlać w konsoli godzinę aktualizowaną co 5 sekund.
-// Jak zapewne się już domyślasz, należy użyć funkcji czasu, np. setInterval(), która przyjmie jako parametr funkcję anonimową. Funkcja ta ma wyświetlać w konsoli aktualny czas.
-// Dodatkowo po wyświetleniu 5 kolejnych wartości aktualnego czasu należy zatrzymać wyświetlanie. W tym celu stwórz dodatkową zmienną, która będzie zliczać ilość wyświetlanych informacji.
-// Pamiętaj, że funkcja setInterval() zwraca identyfikator, który pozwoli Ci zatrzymać interwał.
+// deklaracja zmiennych globalnych
+var firstName = 'Ewa'
+const sum = 12;
+let counter = 1
 
-let idInterval
-
-
-const runTimer = function() {
-    let counter = 0
-    idInterval = setInterval(function(){
-        if(counter >= 5) {
-            clearInterval(idInterval)
-        }else {
-            const time = (new Date()).toLocaleTimeString();
-            console.log(time);
-            counter++
-        }
-    }, 5000)
+function fn(param1, param2) {
+    // parametry funkcji sa zmiennymi lokalnymi
+    // deklarujemy zmienne lokalne
+    var firstNameLocal = 'Anna'
+    const numLocal = 12;
+    let counterLocal = 2
 }
 
-runTimer()
+{
+    // deklaracja zmiennej globalnej
+    var firstNameBlock = 'Kasia'
+    // deklaracja zmiennych lokalnych
+    const numBlock = 3;
+    let counterBlock = 12
+}

@@ -1,10 +1,10 @@
-// W pliku app.js napisz funkcję o nazwie showTime i ją wywołaj (uruchom).
-//W ciele tej funkcji wprowadź instrukcje, które pozwolą wyświetlić w konsoli informacje o aktualnej godzinie.
+// Napisz funkcję o nazwie sayHello. Niech przyjmuje ona przez parametr imię osoby, z którą mamy się przywitać.
+// Uruchomienie funkcji w sposób sayHello('devmentor.pl') ma spowodować wyświetlenie w konsoli napisu: Cześć devmentor.pl!.
 
 
-const showTime = function() {
-    const time = (new Date()).toLocaleTimeString();
-    console.log(time);
+const sayHello = function(name) {
+    console.log('Cześć ' + name);
+    
 }
 
-showTime()
+sayHello('devmentor.pl')

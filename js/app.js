@@ -1,7 +1,15 @@
-const fn = function(messageForUser){
-    const userInput = prompt(messageForUser)
-    return userInput
+const getUserInput = function(message){
+    return prompt(message)
 }
 
-const inputFromUser = fn('Ile masz lat?')
-console.log(inputFromUser);
+const sumNumbersFromUser = function(userInputFn){ // funkcja jako parametr
+    const a = userInputFn('Podaj liczbę a') // callback, wywołanie fn wewnatrz fn
+    const b = userInputFn('Podaj liczbę b')
+
+    const sum = parseFloat(a) + parseFloat(b)
+    return sum
+}
+
+const result = sumNumbersFromUser(getUserInput)
+
+console.log(result);

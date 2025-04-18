@@ -1,23 +1,16 @@
-const userA = prompt('Podaj a...')
-const userB = prompt('Podaj b...')
-const userC = prompt('Podaj c...')
+// deklaracja zostala przeniesiona na gore ale bez wartosci, wiec mamy undefined
+console.log(firstName); // undefined
 
-// poniewaz dziala hoisting, to moge uruchomic ponizsze funkcje
-const sum = getSum(userA, userB, userC)
-const avg = getAverage(sum, 3)
-console.log(avg);
+// deklaracja zmiennej
+var firstName = 'Anna'
+console.log(firstName);
 
+// bląd! wartosc showInfo to undefined, sama deklaracja została przeniesiona - bez wartosci,
+// undefined nie da sie wywołac
 
-function getSum(a, b, c){
-    let sum  = parseInt(a)
-    sum += parseInt(b)
-    sum += parseInt(c)
-    return sum
-}
+showInfo()
 
-function getAverage(sum, count) {
-    if(count === 0) {
-        return 0
-    }
-    return sum / count
+var showInfo = function () {
+    console.log('Hoisting');
+    
 }

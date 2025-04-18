@@ -1,11 +1,20 @@
-let arr = new Array(0)
+const numbers = []
 // deklaruje pusta tablice
 
-const names = new Array('Jan', 'Anna', 'Kasia')
-// deklaruje 3 elementowa tablicę
+const names = new Array()
+// deklaruje pusta tablice
 
-console.log(names[0]); // Jan
-// pobieram wartosc pierwszego elementu
+console.log(numbers, names); // [], []
+// wyswietlam tablice z zawartoscia
 
-console.log(names.length); // 3
-// pobieram ilosc elementow
+numbers.push(1, 2, 3)
+//dodaje 3 elementy typu [number]
+
+names.push('Jan');
+
+console.log(numbers, names);
+
+console.log(numbers.length, names.length);
+// wyswietlam ilosc elementow: 3 oraz 1, przechowywanych w tablicy
+
+

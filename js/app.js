@@ -1,20 +1,14 @@
-const numbers = []
-// deklaruje pusta tablice
+// deklaruje 3 elementowa tablice
+const names = ['Jan', 'Anna', 'Kasia'];
 
-const names = new Array()
-// deklaruje pusta tablice
+if(names.indexOf('Jan') > -1){
+    console.log('Istnieje w tablicy!');
+}else {
+    console.log('Brak w tablicy!');
+}
 
-console.log(numbers, names); // [], []
-// wyswietlam tablice z zawartoscia
-
-numbers.push(1, 2, 3)
-//dodaje 3 elementy typu [number]
-
-names.push('Jan');
-
-console.log(numbers, names);
-
-console.log(numbers.length, names.length);
-// wyswietlam ilosc elementow: 3 oraz 1, przechowywanych w tablicy
-
-
+if(names.includes('Kasia')){
+    console.log('Istnieje w tablicy');
+} else {
+    console.log('Brak w tablicy!')
+}

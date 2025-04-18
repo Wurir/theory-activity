@@ -1,16 +1,11 @@
-// deklaracja zostala przeniesiona na gore ale bez wartosci, wiec mamy undefined
-console.log(firstName); // undefined
+// najpierw deklaracja zmiennych globalnych
+let state;
 
-// deklaracja zmiennej
-var firstName = 'Anna'
-console.log(firstName);
-
-// bląd! wartosc showInfo to undefined, sama deklaracja została przeniesiona - bez wartosci,
-// undefined nie da sie wywołac
-
-showInfo()
-
-var showInfo = function () {
-    console.log('Hoisting');
-    
+function fn(){
+    // najpierw deklaracja zmiennych lokalnych
+    const a = 3;
+    const b = 4;
 }
+
+console.log(hoisting); // blad
+const hoisting = '??'

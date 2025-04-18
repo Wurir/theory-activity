@@ -1,15 +1,23 @@
-// mozemy wywolac getNum(), poniewaz hoisting przeniosl deklaracje zmiennej
-const num = getNum()
-console.log(num); // 2
+const userA = prompt('Podaj a...')
+const userB = prompt('Podaj b...')
+const userC = prompt('Podaj c...')
 
-// deklaracja funkcji
-function getNum() {
-    return 2
+// poniewaz dziala hoisting, to moge uruchomic ponizsze funkcje
+const sum = getSum(userA, userB, userC)
+const avg = getAverage(sum, 3)
+console.log(avg);
+
+
+function getSum(a, b, c){
+    let sum  = parseInt(a)
+    sum += parseInt(b)
+    sum += parseInt(c)
+    return sum
 }
 
-// deklaracja zostala przeniesiona na gore, ale bez wartosci wiec mamy undefined
-
-console.log(fistName);
-
-// deklaracja zmiennej
-var firstName = 'Anna'
+function getAverage(sum, count) {
+    if(count === 0) {
+        return 0
+    }
+    return sum / count
+}

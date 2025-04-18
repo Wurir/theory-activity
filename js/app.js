@@ -10,3 +10,6 @@ console.log(names[0]); // Jan
 console.log(names.length); // 3
 // pobieram ilosc elementow
 
+const lastIndex = names.length - 1;
+console.log(names[lastIndex]); // kasia
+// pobieram ostatni element

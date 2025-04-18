@@ -1,36 +1,13 @@
-const books = [{
-    id: 1,
-    title: "Prince Caspian",
-    language: "en"
-  },
-  {
-    id: 2,
-    title: "Mały książę",
-    language: "pl"
-  },
-  {
-    id: 3,
-    title: "Chemia śmierci",
-    language: "pl"
-  },
-  {
-    id: 4,
-    title: "Duma i uprzedzenie",
-    language: "pl"
-  },
-    {
-    id: 5,
-    title: "Madame Bovary",
-    language: "fre"
-  }
-];
+const numbers = [1, 2, 3, 4, 5];
 
-books.sort(function(a, b) {
-    if(a.language === 'pl'){
-        return -1
-    } else {
-        return 1
-    }
-})
+// wyswietlanie danych w konsoli
+for(let i=0; i<numbers.length; i++) {
+    console.log(numbers[i]);
+}
 
-console.log(books);
+// obliczanie sumy na podstawie liczb w tablicy
+let sum = 0
+for(let j=0; j<numbers.length; j++) {
+    sum += numbers[j]
+}
+console.log(sum); // 15

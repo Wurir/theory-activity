@@ -1,20 +1,15 @@
-// zmienna globalna
-const num = 12;
-console.log(num); // 12
+// mozemy wywolac getNum(), poniewaz hoisting przeniosl deklaracje zmiennej
+const num = getNum()
+console.log(num); // 2
 
-
-function fn(){
-    // zmienna lokalna
-    const num = 44
-    console.log(num); // 44
-
-    {
-        // tworze nowy zakres przy pomocy bloku kodu
-        const num = 450;
-        console.log(num); // 450
-    }
-    console.log(num); // 44
+// deklaracja funkcji
+function getNum() {
+    return 2
 }
 
-fn()
-console.log(num); // 12
+// deklaracja zostala przeniesiona na gore, ale bez wartosci wiec mamy undefined
+
+console.log(fistName);
+
+// deklaracja zmiennej
+var firstName = 'Anna'

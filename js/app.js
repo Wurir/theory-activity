@@ -1,14 +1,17 @@
-// deklaruje 3 elementowa tablice
-const names = ['Jan', 'Anna', 'Kasia'];
+// deklarujemy zmienna, ktora bedzie przechowywac nasze wylosowane liczby
+const numbers = []
+//tworzymy petle, ktora bedzie sie wykonywac dopoki ilosc elementow w tablicy
+// jest mniejsza niz 5
 
-if(names.indexOf('Jan') > -1){
-    console.log('Istnieje w tablicy!');
-}else {
-    console.log('Brak w tablicy!');
+while(numbers.length < 5) {
+    // losujemy liczbe od 0 do 10
+    const num = Math.round(Math.random() * 10)
+
+    // sprawdzamy czy wylosowana liczba znajduje sie w tablicy
+    if(!numbers.includes(num)){
+        numbers.push(num)
+        // dodaje wylosowana liczbe do tablicy
+    }
 }
 
-if(names.includes('Kasia')){
-    console.log('Istnieje w tablicy');
-} else {
-    console.log('Brak w tablicy!')
-}
+console.log(numbers);

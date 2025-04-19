@@ -13,3 +13,15 @@ console.log(evenNumbers); // [false, true, false, true, false]
 function isEven(element){
     return element % 2 === 0
 }
+
+const cart = [
+    ['skarpetki', 3, 4.90],
+    ['długopis', 4, 3.90],
+    ['zeszyt', 2, 5.90]
+]
+
+const costPerProduct = cart.map(function(product){
+    return (product[1] * product[2]).toFixed(2)
+})
+
+console.log(costPerProduct);

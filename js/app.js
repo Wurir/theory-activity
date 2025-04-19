@@ -10,10 +10,14 @@ function showItemWithIndex(item, index) {
 
 numbers.forEach(showItemWithIndex)
 
-let sum = 0
-function getSum(item){
-    return sum += item
+function getSum(arr){
+    let sum = 0
+    arr.forEach(function(num){
+        sum += num
+    })
+    return sum
 }
 
-numbers.forEach(getSum)
+const sum = getSum(numbers)
 console.log(sum);
+

@@ -1,26 +1,11 @@
 const numbers = [1, 2, 3, 4, 5];
-const sum = getSum(numbers)
-const evenNumbers = getEvenNumbers(numbers)
-const sumOfEvenNumbers = getSum(evenNumbers)
 
-function getSum(arr) {
-    let sum = 0
-    for(let i=0; i<arr.length; i++){
-        sum += arr[i]
-    }
-    return sum
+numbers.forEach(function(element, index, array) {
+    console.log(element);
+})
+
+function showItemWithIndex(item, index) {
+    console.log(index, '=>', item)
 }
 
-function getEvenNumbers(arr){
-    const evenNumbers = []
-    for(let j=0; j<arr.length; j++){
-        if(arr[j] % 2 === 0){
-            evenNumbers.push(arr[j])
-        }
-    }
-    return evenNumbers
-}
-
-console.log(sum); // 15
-console.log(evenNumbers); //  [2, 4]
-console.log(sumOfEvenNumbers); // 6
+numbers.forEach(showItemWithIndex)

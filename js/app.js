@@ -1,23 +1,15 @@
-const numbers = [1, 2, 3, 4, 5];
+const numbers = [1.12, 2.13, 3.31, 4.61, 5.32];
+const integers = numbers.map(parseNumbersToInt)
+console.log(integers); // [1, 2, 3, 4, 5]
 
-numbers.forEach(function(element, index, array) {
-    console.log(element);
-})
 
-function showItemWithIndex(item, index) {
-    console.log(index, '=>', item)
+function parseNumbersToInt(element, index, array){
+    return parseInt(element)
 }
 
-numbers.forEach(showItemWithIndex)
+const evenNumbers = integers.map(isEven)
+console.log(evenNumbers); // [false, true, false, true, false]
 
-function getSum(arr){
-    let sum = 0
-    arr.forEach(function(num){
-        sum += num
-    })
-    return sum
+function isEven(element){
+    return element % 2 === 0
 }
-
-const sum = getSum(numbers)
-console.log(sum);
-

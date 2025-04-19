@@ -9,3 +9,11 @@ function showItemWithIndex(item, index) {
 }
 
 numbers.forEach(showItemWithIndex)
+
+let sum = 0
+function getSum(item){
+    return sum += item
+}
+
+numbers.forEach(getSum)
+console.log(sum);

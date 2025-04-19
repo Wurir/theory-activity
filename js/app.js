@@ -20,8 +20,9 @@ const cart = [
     ['zeszyt', 2, 5.90]
 ]
 
-const costPerProduct = cart.map(function(product){
-    return (product[1] * product[2]).toFixed(2)
+// usuwam dlugopis z cart
+const newCart = cart.filter(function(product){
+    return product[0] !== 'długopis'
 })
 
-console.log(costPerProduct);
+console.log(newCart);

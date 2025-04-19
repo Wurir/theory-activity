@@ -1,13 +1,13 @@
 const numbers = [1, 2, 3, 4, 5];
+const sum = getSum(numbers)
 
-// wyswietlanie danych w konsoli
-for(let i=0; i<numbers.length; i++) {
-    console.log(numbers[i]);
+
+function getSum(arr) {
+    let sum = 0
+    for(let i=0; i<arr.length; i++){
+        sum += arr[i]
+    }
+    return sum
 }
 
-// obliczanie sumy na podstawie liczb w tablicy
-let sum = 0
-for(let j=0; j<numbers.length; j++) {
-    sum += numbers[j]
-}
 console.log(sum); // 15

@@ -4,8 +4,10 @@ const user = {
     age: 24,
 }
 
-console.log(user.firstName, user['firstName']); // Alicja Alicja
+for(const key in user){
+    console.log(key);
+}
 
-const propName = 'firstName'
-console.log(user[propName]); // Alicja
-
+for(const key in user){
+    console.log(user[key]);
+}

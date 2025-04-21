@@ -2,10 +2,18 @@
 // Twoim zadaniem będzie wygenerowanie na jej podstawie nowej tablicy liczb określających lata, które minęły od wskazanej daty do obecnego czasu. Do rozwiązanie tego zadania wykorzystaj metodę tablicową .map().
 // Przykładowo: 2021 - 1980 = 41 – liczba 41 ma się pojawić jako pierwszy element nowej tablicy.
 
-const years = [1980, 1934, 2002, 2019];
+const numbers = [1, 2, 3, 4, 5, 6, 7];
 
-const yearsPassed = years.map(function(element){
-    return 2025 - element
+const evenNumbers = numbers.filter(function(element){
+    if(element % 2 === 0){
+        return element
+    }
 })
 
-console.log(yearsPassed);
+console.log(evenNumbers); // [2, 4, 6]
+
+const sumNumbers = evenNumbers.reduce(function(accumulator, currentValue){
+    return accumulator + currentValue
+}, 0)
+
+console.log(sumNumbers); // 12

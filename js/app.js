@@ -9,9 +9,9 @@ const totalPrice = getTotalPrice(travelPrice)
 console.log(totalPrice); // 2532
 
 function getTotalPrice(priceObject){
-    let totalPrice = 0
-    for(const key in priceObject){
-        totalPrice += priceObject[key]
-    }
+    const values = Object.values(priceObject)
+    const totalPrice = values.reduce(function(acc, price){
+        return acc + price
+    }, 0)
     return totalPrice
 }

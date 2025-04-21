@@ -1,19 +1,11 @@
-let a = 12;
-let b = a;
-console.log(b); // 12
-
-b = 14
-console.log(a, b); // 14
-
-
-let objA = {
-    num: 12,
+const user = {
+    firstName: 'Alicja',
+    lastName: 'Nowak',
+    age: 24,
 }
 
-let objB = objA
-console.log(objB.num); // 12
+console.log(user.firstName, user['firstName']); // Alicja Alicja
 
-objB.num = 14
-console.log(objA.num, objB.num); // 14 14
-
+const propName = 'firstName'
+console.log(user[propName]); // Alicja
 

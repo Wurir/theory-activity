@@ -1,20 +1,19 @@
-function showInfo(){
-    console.log(this.text);
-    function changeContext() {
-        console.log(this.text);
-    }
-    changeContext() // undefined
+let a = 12;
+let b = a;
+console.log(b); // 12
+
+b = 14
+console.log(a, b); // 14
+
+
+let objA = {
+    num: 12,
 }
 
-const notice = {
-    text: 'Notice!',
-    showText: showInfo,
-}
+let objB = objA
+console.log(objB.num); // 12
 
-const error = {
-    text: 'Error!',
-    showText: showInfo,
-}
+objB.num = 14
+console.log(objA.num, objB.num); // 14 14
 
-notice.showText() // Notice! + undefined
-error.showText() // Error! + undefined
+

@@ -1,28 +1,9 @@
-const numbers = [1.12, 2.13, 3.31, 4.61, 5.32];
-const integers = numbers.map(parseNumbersToInt)
-console.log(integers); // [1, 2, 3, 4, 5]
+//W pliku app.js stwórz zmienną users i przypisz do niej tablicę, która będzie przechowywać imiona i nazwiska przedstawione w formie ciągu znaków.
+//Następnie wyświetl w konsoli informacje o pierwszym, trzecim i piątym użytkowniku. Dodatkowo z pomocą właściwości .length wyświetl, ile elementów zawiera tablica.
 
 
-function parseNumbersToInt(element, index, array){
-    return parseInt(element)
-}
+const users = ['Jan Kowalski', 'John Doe', 'Iron Man', 'Agnieszka Kowalska', 'Bartek Bogdanowicz']
 
-const evenNumbers = integers.map(isEven)
-console.log(evenNumbers); // [false, true, false, true, false]
+console.log(users[0], users[2], users[4]);
+console.log(users.length);
 
-function isEven(element){
-    return element % 2 === 0
-}
-
-const cart = [
-    ['skarpetki', 3, 4.90],
-    ['długopis', 4, 3.90],
-    ['zeszyt', 2, 5.90]
-]
-
-// usuwam dlugopis z cart
-const newCart = cart.filter(function(product){
-    return product[0] !== 'długopis'
-})
-
-console.log(newCart);

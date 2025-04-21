@@ -1,5 +1,9 @@
 function showInfo(){
     console.log(this.text);
+    function changeContext() {
+        console.log(this.text);
+    }
+    changeContext() // undefined
 }
 
 const notice = {
@@ -12,5 +16,5 @@ const error = {
     showText: showInfo,
 }
 
-notice.showText() // Notice!
-error.showText() // Error!
+notice.showText() // Notice! + undefined
+error.showText() // Error! + undefined

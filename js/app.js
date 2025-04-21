@@ -3,14 +3,14 @@ const car = {
     mileage: 1203,
     horsepower: 540,
     seatsNumber: 2,
+    getColor: function(){
+        return this.color
+    },
 }
 
-car.color = 'blue'
-// zmieniam wartosc dla wlasciwosci [color]
+car.getSeatsNumber = function(){
+    return this.seatsNumber
+}
 
-console.log(car.color, car['color']);
-// wyświetlam aktualna wartosc na dwa sposoby
+console.log(car.getColor(), car.getSeatsNumber());
 
-const hp = car.horsepower
-// przypisuje wartosc z wlasciwosci [horsepower] do zmiennej [hp]
-console.log(hp);

@@ -1,18 +1,11 @@
-setInterval( function() {
-    const now = new Date();
-    const time = getTime(now);
-    document.title = time;
-    console.clear();
-    console.log(time);
-}, 1000);
+const a = 2;
+const n = 3; // przyjmuje, ze tylko liczby dodatnie
 
-function getTime(date){
-    let time  = startWithZero(date.getHours());
-    time += ':' + startWithZero(date.getMinutes());
-    time += ':' + startWithZero(date.getSeconds());
-    return time
-};
-
-function startWithZero(num){
-    return (num < 10 ? '0' : '') + num;
+let pow = 1;
+for(let i=1; i<=n; i++){
+    pow *= a
 }
+console.log(pow); // 8
+
+console.log(Math.pow(a, n)); // 8
+

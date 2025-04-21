@@ -1,16 +1,16 @@
-const car = {
-    color: 'red',
-    mileage: 1203,
-    horsepower: 540,
-    seatsNumber: 2,
-    getColor: function(){
-        return this.color
-    },
+function showInfo(){
+    console.log(this.text);
 }
 
-car.getSeatsNumber = function(){
-    return this.seatsNumber
+const notice = {
+    text: 'Notice!',
+    showText: showInfo,
 }
 
-console.log(car.getColor(), car.getSeatsNumber());
+const error = {
+    text: 'Error!',
+    showText: showInfo,
+}
 
+notice.showText() // Notice!
+error.showText() // Error!

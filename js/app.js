@@ -1,16 +1,22 @@
+const studentsNum = parseInt(prompt('Liczba uczniów?'))
+const studentsList = []
+
+for(let i=0; i<studentsNum; i++){
+    const firstName = prompt('Podaj imię (' + i + ')')
+    const lastName = prompt('Podaj nazwisko (' + i + ')')
+
+    const newStudent = new Student(firstName, lastName)
+    studentsList.push(newStudent)
+}
+
+studentsList.forEach(function(item){
+    item.showFullName()
+})
+
 function Student(initFirstName, initLastName){
     this.firstName = initFirstName
     this.lastName = initLastName
-    this.class = '2B'
     this.showFullName = function(){
-        console.log(this.firstName, this.lastName)
+        console.log(this.firstName, this.lastName);
     }
 }
-
-const student1 = new Student('Marek', 'Nowak')
-student1.firstName = 'Darek'
-student1.lastName = 'Jarek'
-const student2 = new Student('Anna', 'Kowal')
-
-console.log(student1.class, student2.class); // 2B 2B
-student1.showFullName() // Darek Jarek

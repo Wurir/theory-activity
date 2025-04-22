@@ -1,11 +1,10 @@
-const a = 2;
-const n = 3; // przyjmuje, ze tylko liczby dodatnie
-
-let pow = 1;
-for(let i=1; i<=n; i++){
-    pow *= a
+const user = {
+    firstName: 'Bartek',
+    lastName: 'Bogdanowicz',
+    sex: 'male',
+    age: 31
 }
-console.log(pow); // 8
 
-console.log(Math.pow(a, n)); // 8
-
+for(const key in user){
+    console.log(user[key]);
+}

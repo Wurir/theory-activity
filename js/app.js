@@ -1,14 +1,9 @@
-const btnEl = document.querySelector('button')
-const sectionEl = document.querySelector('section')
+const btnsList = document.querySelectorAll('button')
 
-const addClassToElement = function(){
-    const className = this.tagName.toLowerCase()
-    this.classList.add(className)
-    console.log(className + ' was clicked')
+const changeText = function () {
+    this.innerText = 'clicked';
 }
 
-if(btnEl && sectionEl){
-    btnEl.addEventListener('click', addClassToElement)
-
-    sectionEl.addEventListener('click', addClassToElement)
-}
+btnsList.forEach(function (btn) {
+    btn.addEventListener('click', changeText)
+})

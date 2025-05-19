@@ -1,8 +1,13 @@
-const handleClick = function () {
-    console.log('button was clicked')
+const contentEl = document.querySelector('.content')
+// Jeśli plik JS jest podpięty do sekcji <head/>,
+// to zmienna [contentEl] będzie zawierać [null].
+
+const init = function () {
+    const contentEl = document.querySelector('.content')
+    // Jeśli wyszukanie nastąpi po załadowaniu DOM-u,
+    // to element zostanie odnaleziony prawidłowo.
+    // Dzięki wykorzystaniu DOMContentLoaded miejsce
+    // podpięcia pliku JS nie ma już znaczenia!
 }
 
-const btnEl = document.querySelector('.btn')
-if (btnEl) {
-    btnEl.addEventListener('click', handleClick)
-}
+document.addEventListener('DOMContentLoaded', init)

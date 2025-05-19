@@ -1,9 +1,10 @@
-const itemsList = document.querySelectorAll('section, article, h1')
+const btnsList = document.querySelectorAll('button')
 
-const showTagName = function(){
-    console.log(this.tagName)
+const showInformation = function(e){
+    console.log(e.type, this.innerText)
 }
 
-itemsList.forEach(function(item){
-    item.addEventListener('mouseenter', showTagName)
+btnsList.forEach(function(item){
+    item.addEventListener('mouseenter', showInformation)
+    item.addEventListener('click', showInformation)
 })

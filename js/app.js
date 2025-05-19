@@ -1,10 +1,9 @@
 const btnsList = document.querySelectorAll('button')
 
-const showInformation = function(e){
-    console.log(e.type, this.innerText)
+const showObject = function(e){
+    console.log(e)
 }
 
 btnsList.forEach(function(item){
-    item.addEventListener('mouseenter', showInformation)
-    item.addEventListener('click', showInformation)
+    item.addEventListener('click', showObject)
 })

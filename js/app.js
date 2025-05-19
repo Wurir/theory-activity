@@ -1,13 +1,13 @@
-const linksList = document.querySelectorAll('a')
+const itemsList = document.querySelectorAll('section, article, h1')
 
-const getHref = function(e){
-    e.preventDefault()
+const showTagName = function(e){
+    console.log(this.tagName)
 
-    const href = this.getAttribute('href')
-
-    console.log(href)
+    if(this.tagName === 'H1'){
+        e.stopPropagation()
+    }
 }
 
-linksList.forEach(function(item){
-    item.addEventListener('click', getHref)
+itemsList.forEach(function(item){
+    item.addEventListener('click', showTagName)
 })

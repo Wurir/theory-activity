@@ -1,14 +1,6 @@
-function Student(initFirstName, initLastName){
-    this.firstName = initFirstName
-    this.lastName = initLastName
+const btnEl = document.querySelector('.btn')
+if(btnEl){
+    btnEl.addEventListener('click', function(){
+        console.log('button was clicked')
+    })
 }
-
-Student.prototype.showFullName = function(){
-    console.log(this.firstName, this.lastName);
-}
-
-const student1 = new Student('Anna', 'Kowal')
-student1.showFullName()
-
-const student2 = new Student('Michał', 'Nowak')
-student2.showFullName()

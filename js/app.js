@@ -1,19 +1,13 @@
-const btnsList = document.querySelectorAll('button')
-const pElement = document.querySelector('p')
+const linksList = document.querySelectorAll('a')
 
-const renderInfo = function(e){
-    if(pElement){
-        let text = parseInt(e.timeStamp / 1000)
+const getHref = function(e){
+    e.preventDefault()
 
-        text += ':' + this.tagName
+    const href = this.getAttribute('href')
 
-        text += ' -> ' + e.type
-
-        pElement.innerText = text
-    }
+    console.log(href)
 }
 
-btnsList.forEach(function(item){
-    item.addEventListener('click', renderInfo)
-    item.addEventListener('mouseenter', renderInfo)
+linksList.forEach(function(item){
+    item.addEventListener('click', getHref)
 })

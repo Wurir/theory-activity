@@ -6,4 +6,13 @@ const handleClick = function (e) {
 }
 
 btnElement.addEventListener('click', handleClick)
-btnElement.click()
+
+const eventClick = new Event('click', {
+    'bubbles': true,
+    // czy wykorzystujemy faze bubbling przy propagacji
+    'cancelable': true,
+    //czy mozna zatrzymac event za pomocą .preventDefault()
+})
+// tworze event typu 'click'
+
+btnElement.dispatchEvent(eventClick)

@@ -1,21 +1,17 @@
-const btnElement = document.querySelector('button')
-const pElement = document.querySelector('p')
+const itemsList = document.querySelectorAll('section, article, h1')
 
-const handleRender = function (e) {
-    this.innerText = e.detail
-    // wstaw tekst przekazany przy wywolaniu
+const handleOutput = function(e){
+    console.log(this.tagName, e.type)
 }
 
-const handleClick = function () {
-    const renderEvent = new CustomEvent('render', {
-        detail: 'new content!'
-    })
-    // tworze event o nazwie 'render'
-    // oraz przekazuje dodatkowe dane w 'detail'
+itemsList.forEach(function(item){
+    item.addEventListener('output', handleOutput)
 
-    pElement.dispatchEvent(renderEvent)
-    // wywołuje utworzony event na elemencie p
-}
-
-btnElement.addEventListener('click', handleClick)
-pElement.addEventListener('render', handleRender)
+    if(item.tagName === 'H1'){
+        const outputEvent = new CustomEvent('output', {
+            detail: item.tagName,
+            bubbles: false,
+        })
+        item.dispatchEvent(outputEvent)
+    }
+})

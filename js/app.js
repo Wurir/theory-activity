@@ -2,9 +2,9 @@ const itemsList = document.querySelectorAll(
     'section, article, h1'
 );
 const showInfo = function (e) {
-    let text = e.target.tagName + ': '
+    let text = e.currentTarget.tagName + ': '
 
-    text += this.tagName
+    text += e.currentTarget === this ? 'Y' : 'N'
     console.log(text)
 }
 

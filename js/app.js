@@ -2,10 +2,11 @@ const itemsList = document.querySelectorAll(
     'section, article, h1'
 );
 const showInfo = function (e) {
-    let text = e.currentTarget.tagName + ': '
+    if(e.target === e.currentTarget){
+        const text = e.target.tagName
+        console.log(text + ' was clicked!')
 
-    text += e.currentTarget === this ? 'Y' : 'N'
-    console.log(text)
+    }
 }
 
 itemsList.forEach(function (item) {

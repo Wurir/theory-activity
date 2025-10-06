@@ -1,17 +1,12 @@
-const itemsList = document.querySelectorAll('section, article, h1')
+const btnEl = document.querySelector('.btn')
 
-const handleOutput = function(e){
-    console.log(this.tagName, e.type)
+if(btnEl) {
+    // jesli został wyszukany
+
+    btnEl.addEventListener('click', function(){
+        // wywolaj te funcke, jesli wyszukany przycisk zostanie klikniety
+
+        console.log('button was clicked')
+        // wyswietl napis w consoli
+    })
 }
-
-itemsList.forEach(function(item){
-    item.addEventListener('output', handleOutput)
-
-    if(item.tagName === 'H1'){
-        const outputEvent = new CustomEvent('output', {
-            detail: item.tagName,
-            bubbles: false,
-        })
-        item.dispatchEvent(outputEvent)
-    }
-})

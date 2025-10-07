@@ -1,10 +1,15 @@
-const formEl = document.querySelector('form')
+const itemsList = document.querySelectorAll('section, article, h1')
 
-const handleSubmit = function(e){
-    e.preventDefault()
-    // zatrzymuje wyslanie fomularza co umozliwi zrobienie np walidacji
+const showTagName = function(e){
+    console.log(this.tagName)
 
-    console.log('submit!')
+    if(this.tagName === 'ARTICLE'){
+        e.stopPropagation()
+        // zatrzymuje propagacje na <article> dla elementow wyzej w drzewie DOM
+        // tj. dla przodkow <article> nie sa uruchamiane callbacki
+    }
 }
 
-formEl && formEl.addEventListener('submit', handleSubmit)
+itemsList.forEach(function(item){
+    item.addEventListener('click', showTagName)
+})

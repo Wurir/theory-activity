@@ -1,14 +1,10 @@
-const linksList = document.querySelectorAll('a')
+const formEl = document.querySelector('form')
 
-const confirmRedirect = function(e){
-    const newUrl = this.getAttribute('href')
-    const userDecision = confirm('Are you sure? -> ' + newUrl)
+const handleSubmit = function(e){
+    e.preventDefault()
+    // zatrzymuje wyslanie fomularza co umozliwi zrobienie np walidacji
 
-    if(!userDecision){
-        e.preventDefault()
-    }
+    console.log('submit!')
 }
 
-linksList.forEach(function(item){
-    item.addEventListener('click', confirmRedirect)
-})
+formEl && formEl.addEventListener('submit', handleSubmit)

@@ -4,12 +4,20 @@ const showTagName = function(e){
     console.log(this.tagName)
 
     if(this.tagName === 'ARTICLE'){
-        e.stopPropagation()
-        // zatrzymuje propagacje na <article> dla elementow wyzej w drzewie DOM
-        // tj. dla przodkow <article> nie sa uruchamiane callbacki
+        e.stopImmediatePropagation()
+        // przy uzyciu stopPropagation, wywola sie funcka showText, natomiast
+        // uzywajac stopImmediatePropagation, showText nie zostanie wykonane
     }
+}
+
+const showText = function(){
+    console.log('click on article!')
 }
 
 itemsList.forEach(function(item){
     item.addEventListener('click', showTagName)
+    if(item.tagName === 'ARTICLE'){
+        item.addEventListener('click', showText)
+    }
 })
+

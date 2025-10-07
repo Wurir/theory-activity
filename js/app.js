@@ -1,13 +1,15 @@
-const contentEl = document.querySelector('.content')
-    // Jeśli plik JS jest podpięty do sekcji <head/>,
-    // to zmienna [contentEl] będzie zawierać [null].
+const btnEl = document.querySelector('.btn')
+const textEl = document.querySelector('.text')
 
-const init = function(){
-    const contentEl = document.querySelector('.content')
-    // Jeśli wyszukanie nastąpi po załadowaniu DOM-u,
-    // to element zostanie odnaleziony prawidłowo.
-    // Dzięki wykorzystaniu DOMContentLoaded miejsce
-    // podpięcia pliku JS nie ma już znaczenia
+const onEnter = function(){
+    textEl.textContent = 'enter..'
 }
 
-document.addEventListener('DOMContentLoaded', init)
+const onLeave = function(){
+    textEl.textContent = 'leave..'
+}
+
+if(btnEl && textEl) {
+    btnEl.addEventListener('mouseenter', onEnter)
+    btnEl.addEventListener('mouseleave', onLeave)
+}

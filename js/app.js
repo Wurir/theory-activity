@@ -5,9 +5,8 @@ const showTagName = function () {
 }
 
 itemsList.forEach(function (item) {
-    item.addEventListener('click', showTagName, false)
-    // ostatni parametr jest ustawiany domyślnie na false
-    // dlatego nie musimy go pisać dla [click]
-    // oznacza to, że ma zostać wykorzystana
-    // faza [bubbling] propagacji
+    item.addEventListener('click', showTagName, true)
+    // ostatni parametr jest ustawiony na true,
+    // co oznacza, że korzystamy z fazy [capturing]
+    // propagacja odbywa się z góry na dół
 })

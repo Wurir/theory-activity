@@ -1,16 +1,10 @@
-const itemsList = document.querySelectorAll('section, article, h1')
+const btnsList = document.querySelectorAll('button')
 
-const showTagName = function () {
-    console.log(this.tagName)
-    if(this.tagName === 'ARTICLE'){
-        this.removeEventListener('click', showTagName, true)
-        // usuwam nasluchiwanie z elementu ARTICLE
-    }
+const showInformation = function(e){
+    console.log(e.type, this.innerText)
 }
 
-itemsList.forEach(function (item) {
-    item.addEventListener('click', showTagName, true)
-    // ostatni parametr jest ustawiony na true,
-    // co oznacza, że korzystamy z fazy [capturing]
-    // propagacja odbywa się z góry na dół
+btnsList.forEach(function(btn){
+    btn.addEventListener('mouseenter', showInformation)
+    btn.addEventListener('click', showInformation)
 })

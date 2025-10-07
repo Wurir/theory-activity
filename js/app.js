@@ -1,9 +1,13 @@
-const btnList = document.querySelectorAll('button')
+const itemsList = document.querySelectorAll('section, article, h1')
 
-const changeText = function(){
-    this.innerText = 'clicked'
+const showTagName = function () {
+    console.log(this.tagName)
 }
 
-btnList.forEach(function(btnEl){
-    btnEl.addEventListener('click', changeText)
+itemsList.forEach(function (item) {
+    item.addEventListener('click', showTagName, false)
+    // ostatni parametr jest ustawiany domyślnie na false
+    // dlatego nie musimy go pisać dla [click]
+    // oznacza to, że ma zostać wykorzystana
+    // faza [bubbling] propagacji
 })

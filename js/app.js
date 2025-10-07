@@ -1,15 +1,7 @@
-const btnEl = document.querySelector('.btn')
-const textEl = document.querySelector('.text')
+const emailEl = document.querySelector('.email')
 
-const onEnter = function(){
-    textEl.textContent = 'enter..'
+const getValue = function(){
+    console.log(emailEl.value);
 }
 
-const onLeave = function(){
-    textEl.textContent = 'leave..'
-}
-
-if(btnEl && textEl) {
-    btnEl.addEventListener('mouseenter', onEnter)
-    btnEl.addEventListener('mouseleave', onLeave)
-}
+emailEl && emailEl.addEventListener('keyup', getValue)

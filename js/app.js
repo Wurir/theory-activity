@@ -1,17 +1,14 @@
-const btnsList = document.querySelectorAll('button')
-const pElement = document.querySelector('p')
+const linksList = document.querySelectorAll('a')
 
-const renderInfo = function(e){
-    if(pElement){
-        let text = parseInt(e.timeStamp / 1000)
-        // ilosc sekund of uruchomienia strony
-        text += ': ' + this.tagName
-        text += ' -> ' + e.type
-        pElement.innerText = text
+const confirmRedirect = function(e){
+    const newUrl = this.getAttribute('href')
+    const userDecision = confirm('Are you sure? -> ' + newUrl)
+
+    if(!userDecision){
+        e.preventDefault()
     }
 }
 
-btnsList.forEach(function(btn){
-    btn.addEventListener('mouseenter', renderInfo)
-    btn.addEventListener('click', renderInfo)
+linksList.forEach(function(item){
+    item.addEventListener('click', confirmRedirect)
 })

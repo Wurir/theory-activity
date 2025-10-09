@@ -1,9 +1,9 @@
 const itemsList = document.querySelectorAll('section, article, h1')
 
 const showInfo = function(e){
-    let text = e.target.tagName + ': '
+    let text = e.currentTarget.tagName + ': '
     // pobieram nazwe tagu elementu, ktory zostal klikniety
-    text += this.tagName
+    text += e.currentTarget === this ? "Y" : 'N'
     console.log(text);
 }
 

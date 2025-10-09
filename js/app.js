@@ -1,15 +1,11 @@
-const itemsList = document.querySelectorAll('section, article, h1')
+const btnEl = document.querySelector('button')
 
-const showInfo = function(e){
-    if(e.target === e.currentTarget){
-        //wykonaj tylko wtedy gdy callback jest uruchomiony bezposrednio
-        //czyli nie przez propagacje
-        let text = e.target.tagName
-        console.log(text + ' was clicked')
-    }
+const handleClick = function(e){
+    console.log('button was clicked')
+    console.log(e.isTrusted)
+    // zwraca [true], gdy uruchomione przez uzytkownika
+    // zwraca [false], gdy uruchomione z poziomu kodu JS
 }
 
-itemsList.forEach(function(item){
-    item.addEventListener('click', showInfo)
-})
-
+btnEl.addEventListener('click', handleClick)
+btnEl.click()

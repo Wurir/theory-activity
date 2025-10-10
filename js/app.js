@@ -9,7 +9,7 @@ const handleClick = function(e){
 
 btnEl.addEventListener('click', handleClick)
 
-const eventClick = new Event('click', {
+const eventClick = new MouseEvent('click', {
     'bubbles': true, // czy wykorzystujemy faze bubbling w propagacji
     'cancelable': true, // czy mozna zatrzymac event za pomoca preventDefault()
 })

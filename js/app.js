@@ -1,17 +1,17 @@
 const btnEl = document.querySelector('button')
+const pEl = document.querySelector('p')
+
+const handleRender = function(e){
+    this.innerText = e.detail
+    // wstaw tekst przekazany przy wywołaniu [render]
+}
 
 const handleClick = function(e){
-    console.log('button was clicked')
-    console.log(e.isTrusted)
-    // zwraca [true], gdy uruchomione przez uzytkownika
-    // zwraca [false], gdy uruchomione z poziomu kodu JS
+    const renderEvent = new CustomEvent('render', { detail: 'new content!'})
+    // tworze event o nazwie [render] oraz przekazuje dodatkowe dane w [detail]
+
+    pEl.dispatchEvent(renderEvent)
 }
 
 btnEl.addEventListener('click', handleClick)
-
-const eventClick = new MouseEvent('click', {
-    'bubbles': true, // czy wykorzystujemy faze bubbling w propagacji
-    'cancelable': true, // czy mozna zatrzymac event za pomoca preventDefault()
-})
-
-btnEl.dispatchEvent(eventClick)
+pEl.addEventListener('render', handleRender)

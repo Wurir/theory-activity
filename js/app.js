@@ -8,4 +8,7 @@ const handleClick = function(e){
 }
 
 btnEl.addEventListener('click', handleClick)
-btnEl.click()
+
+const eventClick = new Event('click')
+
+btnEl.dispatchEvent(eventClick)

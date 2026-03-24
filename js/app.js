@@ -1,4 +1,9 @@
 const formEl = document.querySelector('form')
 
-formEl.autocomplete = 'on' //uruchamia automatyczne uzupelnianie pola formularza przez przeglądarke
-// tą właściwość mozna tez przypisac w HTML dla elementu <form/>
+formEl.addEventListener('submit', function(e){
+    e.preventDefault()
+    const company = e.target.elements.company //wyszukuje odpowiedni element
+
+    console.log(company.value); //pobieram wartosc wpisana przez uzytkownika
+    
+})

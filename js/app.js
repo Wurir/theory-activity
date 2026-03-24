@@ -1,8 +1,7 @@
 const formEl = document.querySelector('form')
-console.log(
-    formEl.elements[0],
-    formEl.action,
-    formEl.method,
-    formEl.noValidate,
-    formEl.autocomplete
-);
+
+for(const el of formEl.elements){
+    console.log(el)
+}
+
+console.log(formEl.elements[0], formEl.elements['inputName'])

@@ -1,7 +1,5 @@
 const formEl = document.querySelector('form')
 
-for(const el of formEl.elements){
-    console.log(el)
-}
+formEl.action = 'https://devmentor.pl' // ustalam nowa wartosc dla action
 
-console.log(formEl.elements[0], formEl.elements['inputName'])
+console.log(formEl.action)

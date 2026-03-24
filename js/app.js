@@ -1,3 +1,4 @@
 const formEl = document.querySelector('form')
 
-formEl.noValidate = true // stopuja domyslną walidacje formularza
+formEl.autocomplete = 'on' //uruchamia automatyczne uzupelnianie pola formularza przez przeglądarke
+// tą właściwość mozna tez przypisac w HTML dla elementu <form/>

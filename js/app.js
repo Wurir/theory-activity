@@ -1,5 +1,5 @@
 const formEl = document.querySelector('form')
 
-formEl.action = 'https://devmentor.pl' // ustalam nowa wartosc dla action
+formEl.method = 'GET'
 
-console.log(formEl.action)
+console.log(formEl.method)

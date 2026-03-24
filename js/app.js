@@ -1,3 +1,8 @@
-const formByQuery = document.querySelector('form')
-const formByPosition = document.forms[0]
-const formByName = document.forms['forName']
+const formEl = document.querySelector('form')
+console.log(
+    formEl.elements[0],
+    formEl.action,
+    formEl.method,
+    formEl.noValidate,
+    formEl.autocomplete
+);

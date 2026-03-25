@@ -1,9 +1,10 @@
 const sizeList = document.querySelectorAll('[type="radio"]')
+const labelEl = document.querySelector('label')
 
-sizeList.forEach(function(element){
-    element.addEventListener('change', showValue)
-})
+labelEl.addEventListener('click', showSizes) //wykorzystuje propagacje zdarzen
 
-function showValue(e){
-    console.log(e.target.value)
-}
+function showSizes(e){
+    sizeList.forEach(function(element){
+        console.log(element.value, '=>', element.checked) //checked pokazuje czy dany element jest zaznaczony zwracajac boolean
+    }
+)}

@@ -1,10 +1,19 @@
-const sizeList = document.querySelectorAll('[type="radio"]')
-const labelEl = document.querySelector('label')
+const formEl = document.querySelector('form')
+formEl.addEventListener('submit', handleSubmit)
 
-labelEl.addEventListener('click', showSizes) //wykorzystuje propagacje zdarzen
+function handleSubmit(e){
+    e.preventDefault()
 
-function showSizes(e){
-    sizeList.forEach(function(element){
-        console.log(element.value, '=>', element.checked) //checked pokazuje czy dany element jest zaznaczony zwracajac boolean
+    const confirm = e.target.elements['confirm']
+    //wyszukuje element o nazwie confirm
+
+    if(!confirm.checked){
+        //jesli checkbox nie jest zaznaczony
+        const numberAgreement = confirm.value
+        //pobieram wartosc dla input
+        alert('Confirm agreement no: ' + numberAgreement)
+        //wyswietlam alert
+    } else{
+        alert('Thank you! Data was send.')
     }
-)}
+}

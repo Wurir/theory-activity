@@ -1,9 +1,9 @@
-const formEl = document.querySelector('form')
+const sizeList = document.querySelectorAll('[type="radio"]')
 
-formEl.addEventListener('submit', function(e){
-    e.preventDefault()
-    const company = e.target.elements.company //wyszukuje odpowiedni element
-
-    console.log(company.value); //pobieram wartosc wpisana przez uzytkownika
-    
+sizeList.forEach(function(element){
+    element.addEventListener('change', showValue)
 })
+
+function showValue(e){
+    console.log(e.target.value)
+}

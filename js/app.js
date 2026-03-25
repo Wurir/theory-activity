@@ -1,19 +1,17 @@
-const formEl = document.querySelector('form')
-formEl.addEventListener('submit', handleSubmit)
+const defaultRangeValue = 40
+const spanEl = document.querySelector('span')
+const rangeEl = document.querySelector('input')
 
-function handleSubmit(e){
-    e.preventDefault()
+rangeEl.addEventListener('mousemove', showValue)
+rangeEl.addEventListener('change', showValue)
 
-    const confirm = e.target.elements['confirm']
-    //wyszukuje element o nazwie confirm
+spanEl.innerText = defaultRangeValue
+rangeEl.value = defaultRangeValue
 
-    if(!confirm.checked){
-        //jesli checkbox nie jest zaznaczony
-        const numberAgreement = confirm.value
-        //pobieram wartosc dla input
-        alert('Confirm agreement no: ' + numberAgreement)
-        //wyswietlam alert
-    } else{
-        alert('Thank you! Data was send.')
+function showValue(e){
+    const isMouseMoveEvent = e.type === 'mousemove'
+    const isMouseLeftButtonPress = e.buttons === 1
+    if(isMouseMoveEvent && isMouseLeftButtonPress || !isMouseMoveEvent){
+        spanEl.innerText = e.target.value
     }
 }

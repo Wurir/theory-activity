@@ -1,15 +1,17 @@
-const selectEl = document.querySelector('select')
+const textEl = document.querySelector('textarea')
+textEl.addEventListener('change', showText)
+textEl.addEventListener('input', prepareHeight)
 
-selectEl.addEventListener('change', showUser)
+function showText(e){
+    console.log(e.target.value)
+}
 
-function showUser(e){
-    console.log(
-        e.target.value,
-        //wybrana wartosc dla option
-        e.target.selectedIndex,
-        //index zaznaczonego option
-        e.target.selectedOptions
-        //lista zaznaczonych elementow
-    );
-    
+function prepareHeight(e){
+    const item = e.target
+
+    if(item.scrollHeight > item.offsetHeight){
+        //wysokosc zawartosci textaera jest wieksza niz offsetHeight
+        item.style.height = item.scrollHeight + 'px'
+        //zwiekszam wysokosc textarea o scrollHeight dodajac px na koncu
+    }
 }

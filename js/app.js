@@ -1,17 +1,18 @@
-const defaultRangeValue = 40
-const spanEl = document.querySelector('span')
-const rangeEl = document.querySelector('input')
+const colorEl = document.querySelector('input')
+colorEl.addEventListener('change', changeBGColor)
 
-rangeEl.addEventListener('mousemove', showValue)
-rangeEl.addEventListener('change', showValue)
+function changeBGColor(e){
+    const body = document.body
+    const color = e.target.value
+    body.style.backgroundColor = color
+    body.style.color = invertColor(color)
+}
 
-spanEl.innerText = defaultRangeValue
-rangeEl.value = defaultRangeValue
-
-function showValue(e){
-    const isMouseMoveEvent = e.type === 'mousemove'
-    const isMouseLeftButtonPress = e.buttons === 1
-    if(isMouseMoveEvent && isMouseLeftButtonPress || !isMouseMoveEvent){
-        spanEl.innerText = e.target.value
+function invertColor(hex){
+    let color = '#'
+    for(let i=1; i<=6; i=i+2){
+        const dec = 255 - parseInt(hex.substr(i, 2), 16)
+        color += (dec < 16 ? '0' : '') + dec.toString(16)
     }
+    return color
 }

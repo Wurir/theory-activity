@@ -1,19 +1,15 @@
-const formEl = document.querySelector('form')
-formEl.addEventListener('submit', handleSubmit)
+const selectEl = document.querySelector('select')
 
-function handleSubmit(e){
-    e.preventDefault()
+selectEl.addEventListener('change', showUser)
 
-    const confirm = e.target.elements['confirm']
-    //wyszukuje element o nazwie confirm
-
-    if(!confirm.checked){
-        //jesli checkbox nie jest zaznaczony
-        const numberAgreement = confirm.value
-        //pobieram wartosc dla input
-        alert('Confirm agreement no: ' + numberAgreement)
-        //wyswietlam alert
-    } else{
-        alert('Thank you! Data was send.')
-    }
+function showUser(e){
+    console.log(
+        e.target.value,
+        //wybrana wartosc dla option
+        e.target.selectedIndex,
+        //index zaznaczonego option
+        e.target.selectedOptions
+        //lista zaznaczonych elementow
+    );
+    
 }

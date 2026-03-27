@@ -1,19 +1,34 @@
-const inputEl = document.querySelector('input')
-const spanEl = document.querySelector('span')
+const ulEl = document.querySelector('ul')
+const formEl = document.querySelector('form')
 
-inputEl.addEventListener('input', checkEmail)
+formEl.addEventListener('submit', checkData)
 
-function checkEmail(e){
-    const self = e.target
-    const email  = self.value
+function checkData(e) {
+    e.preventDefault()
+    const name = e.target.elements.name.value
+    const email = e.target.elements.email.value
+    const errors = []
 
-    if(!email.includes('@')){
-        //jesli email nie posiada znaku '@' to..
-        self.style.outline = 'none'
-        self.style.border = '1px solid red'
-        spanEl.innerText = 'Wrong email'
-    } else {
-        self.style.border = '1px solid green'
-        spanEl.innerText = ''
+    if (name.length === 0) {
+        errors.push('Name is required!')
     }
+
+    if (!email.includes('@')) {
+        errors.push('Invalid email, "@" is required')
+    }
+
+    if (errors.length > 0) {
+
+        ulEl.innerHTML = ''
+        errors.forEach(function (error) {
+            createError(error, ulEl)
+        })
+    }
+}
+
+function createError(error, parentEl) {
+    const li = document.createElement('li')
+    li.innerText = error
+
+    parentEl.appendChild(li)
 }

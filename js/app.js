@@ -1,18 +1,11 @@
-const colorEl = document.querySelector('input')
-colorEl.addEventListener('change', changeBGColor)
+const num = 1
+const text1 = `string with value from num: ${num}` //mozna umieszczac zmienne/funkcje wewnatrz backtick
 
-function changeBGColor(e){
-    const body = document.body
-    const color = e.target.value
-    body.style.backgroundColor = color
-    body.style.color = invertColor(color)
+const getNum = function(){
+    return num
 }
 
-function invertColor(hex){
-    let color = '#'
-    for(let i=1; i<=6; i=i+2){
-        const dec = 255 - parseInt(hex.substr(i, 2), 16)
-        color += (dec < 16 ? '0' : '') + dec.toString(16)
-    }
-    return color
-}
+const text2 = `string with value from function: ${getNum()}`
+
+console.log(text1);
+console.log(text2);

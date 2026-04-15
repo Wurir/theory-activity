@@ -1,11 +1,15 @@
-const num = 1
-const text1 = `string with value from num: ${num}` //mozna umieszczac zmienne/funkcje wewnatrz backtick
-
-const getNum = function(){
-    return num
+const user = {
+    firstName: 'Łukasz',
+    lastName: 'Nowak',
+    birthYear: 1990,
 }
 
-const text2 = `string with value from function: ${getNum()}`
+const createMessage = function(u){
+    const currYear = (new Date()).getFullYear()
+    const message = `${u.firstName} ${u.lastName} obchodzi w tym roku ${currYear - u.birthYear} urodziny!`
+    return message
+}
 
-console.log(text1);
-console.log(text2);
+const message = createMessage(user)
+
+console.log(message);

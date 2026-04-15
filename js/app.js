@@ -13,3 +13,4 @@ const createMessage = function(u){
 const message = createMessage(user)
 
 console.log(message);
+

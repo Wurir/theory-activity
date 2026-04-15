@@ -1,10 +1,11 @@
-const sumFn = function(a, b){
-    return a+b
-}
+const arr = [1, 2, 3, 4, 5]
 
-const sumFnArrow = (a, b) => {
-    return a+b
-}
+arr.forEach((arr, index)=> {
+    console.log(`${arr} => ${index}`)
+})
 
-console.log(sumFn(1, 2));
-console.log(sumFnArrow(1, 2))
+const newArr = arr.map((item, i)=>{
+    return item * i
+})
+
+console.log(newArr);

@@ -1,12 +1,10 @@
-function useHtml(str, val){
-    return `${str[0]} <b>${val}</b> ${str[1]}`
+const sumFn = function(a, b){
+    return a+b
 }
 
-function useMarkdown(str, val){
-    return `${str[0]} *${val}* ${str[1]}`
+const sumFnArrow = (a, b) => {
+    return a+b
 }
 
-const name = "Bartek"
-
-console.log(useHtml`Super programista ten ${name}!`)
-console.log(useMarkdown`Super programista ten ${name}!`)
+console.log(sumFn(1, 2));
+console.log(sumFnArrow(1, 2))

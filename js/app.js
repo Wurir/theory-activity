@@ -1,16 +1,13 @@
-const user = {
-    firstName: 'Łukasz',
-    lastName: 'Nowak',
-    birthYear: 1990,
+const fn = function(arr, arg1, arg2, arg3){
+    console.log(arr, arg1, arg2, arg3)
+    return 'abc'
 }
 
-const createMessage = function(u){
-    const currYear = (new Date()).getFullYear()
-    const message = `${u.firstName} ${u.lastName} obchodzi w tym roku ${currYear - u.birthYear} urodziny!`
-    return message
-}
+const v1 = 111
+const v2 = 222
 
-const message = createMessage(user)
+const text = fn`ciąg znaków z ${v1} oraz ${v2} i tyle!`
 
-console.log(message);
-
+console.log(text) // stringi z backticka zostana przekazane jako argument [arr],
+//nastepnie arg1 to v1, arg2 to v2, nie podalem arg3 wiec bedzie undefined
+//do text zostanie przypisane abc bo to zwraca fn

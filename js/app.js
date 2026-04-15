@@ -1,13 +1,12 @@
-const fn = function(arr, arg1, arg2, arg3){
-    console.log(arr, arg1, arg2, arg3)
-    return 'abc'
+function useHtml(str, val){
+    return `${str[0]} <b>${val}</b> ${str[1]}`
 }
 
-const v1 = 111
-const v2 = 222
+function useMarkdown(str, val){
+    return `${str[0]} *${val}* ${str[1]}`
+}
 
-const text = fn`ciąg znaków z ${v1} oraz ${v2} i tyle!`
+const name = "Bartek"
 
-console.log(text) // stringi z backticka zostana przekazane jako argument [arr],
-//nastepnie arg1 to v1, arg2 to v2, nie podalem arg3 wiec bedzie undefined
-//do text zostanie przypisane abc bo to zwraca fn
+console.log(useHtml`Super programista ten ${name}!`)
+console.log(useMarkdown`Super programista ten ${name}!`)

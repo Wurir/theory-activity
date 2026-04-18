@@ -1,16 +1,13 @@
-const user = {
-    firstName: 'Łukasz',
-    lastName: 'Nowak',
-    birthYear: 1990,
+const arr = [0, 1, 2, 3]
+const [a, b] = arr
+console.log(a, b);
+// 0 1
+
+const obj = {
+    firstName: 'Bartek',
+    lastName: 'Nowak'
 }
 
-const createMessage = function(u){
-    const currYear = (new Date()).getFullYear()
-    const message = `${u.firstName} ${u.lastName} obchodzi w tym roku ${currYear - u.birthYear} urodziny!`
-    return message
-}
-
-const message = createMessage(user)
-
-console.log(message);
-
+const {lastName} = obj
+console.log(lastName);
+// Nowak

@@ -1,10 +1,18 @@
-const arrNums = [1, 2, 3]
-const arrBools = [true, false]
+const assignPrice = (name, ...products) => {
+    let price = 0
+    products.forEach(item => price += item.price);
 
-console.log([...arrNums, ...arrBools]); // łącze obie tablice używajac spread operator [...], rozpraszajac dwie tablice w jednej
+    return { 
+        name, 
+        price, 
+        products,
+    } //shorthand properties = name: name  => mozna zapisac jako samo [name]. Tak samo z resztą
+}
 
-const calcSum = (...nums)=>{
-    return nums.reduce((acc, num)=> acc + num, 0)
-} //tworze funkcje, ktora przyjmuje limitless argumentow i zwraca ich sume
-
-console.log(calcSum(1, 2, 3, 4, 5));
+console.log(
+    assignPrice(
+        'Łukasz Nowak',
+         { name: 'Karty', price: 20 },
+          { name: 'książka', price: 49 },
+        )
+)

@@ -1,15 +1,17 @@
-const arr = [1, 2, 3, 4]
-
-const [first, ...rest] = arr //wyciagam 1, a reszte przypisuje do nowej tablicy
-console.log(first, rest);
-// 1 [2, 3, 4]
-
-const obj = {
-    name: 'Bartek',
-    weight: '90.5kg',
-    height: '176cm',
+const fn1 = function(a, b ='bbb', c = 12){
+    console.log (a, b, c)
 }
 
-const {name, ...other} = obj
-console.log(name, other);
-// Bartek {weight: '90.5kg', height: '176cm'}
+const fn2 = (a, b, c = 12) => {
+    console.log(a, b, c)
+}
+
+fn1() // undefined 'bbb' 12
+fn2(47) // 47 udefined 12
+
+const obj = {name: 'Bartek'}
+const {name, age = 32} = obj
+console.log(name, age); // Bartek 32
+
+
+//przypisuje wartosci do zmiennych, ktorych waretosc nie zostala okreslona

@@ -1,17 +1,15 @@
-const user = {
-    firstName: 'Bartek',
-    lastName: 'Nowak',
-    age: 22,
+const place = {
+    name: {
+        pl: 'Kraków',
+        la: 'Cracovia',
+        de: 'Krakau',
+    },
+    position: [50.061389, 19.938333],
 }
 
 const {
-    firstName: name, 
-    lastName: secondName
-} = user // przypisuje firstName i lastName do nowych nazw zmiennych [name, secondName]
-console.log(name, secondName);
+    name: {pl: plName},
+    position: [lat, lng],
+} = place
 
-const sayHelloFn = ({firstName, lastName})=>{
-    console.log(`Hello ${firstName} ${lastName}`)
-}
-
-sayHelloFn(user)
+console.log(`${plName} => ${lat} ${lng}`);

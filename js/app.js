@@ -1,18 +1,15 @@
-const assignPrice = (name, ...products) => {
-    let price = 0
-    products.forEach(item => price += item.price);
+const arr = [1, 2, 3, 4]
 
-    return { 
-        name, 
-        price, 
-        products,
-    } //shorthand properties = name: name  => mozna zapisac jako samo [name]. Tak samo z resztą
+const [first, ...rest] = arr //wyciagam 1, a reszte przypisuje do nowej tablicy
+console.log(first, rest);
+// 1 [2, 3, 4]
+
+const obj = {
+    name: 'Bartek',
+    weight: '90.5kg',
+    height: '176cm',
 }
 
-console.log(
-    assignPrice(
-        'Łukasz Nowak',
-         { name: 'Karty', price: 20 },
-          { name: 'książka', price: 49 },
-        )
-)
+const {name, ...other} = obj
+console.log(name, other);
+// Bartek {weight: '90.5kg', height: '176cm'}

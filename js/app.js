@@ -4,7 +4,5 @@ const obj = {
     age: 22,
 }
 
-const {lastName, lastName} = obj // tworze zmienne firstName, lastName wyciagajac je z obj
-console.log(lastName, lastName);
-
-
+const {firstName, lastName} = obj // tworze zmienne firstName, lastName wyciagajac je z obj
+console.log(firstName, lastName);

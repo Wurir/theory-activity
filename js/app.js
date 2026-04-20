@@ -1,15 +1,10 @@
-const place = {
-    name: {
-        pl: 'Kraków',
-        la: 'Cracovia',
-        de: 'Krakau',
-    },
-    position: [50.061389, 19.938333],
-}
+const arrNums = [1, 2, 3]
+const arrBools = [true, false]
 
-const {
-    name: {pl: plName},
-    position: [lat, lng],
-} = place
+console.log([...arrNums, ...arrBools]); // łącze obie tablice używajac spread operator [...], rozpraszajac dwie tablice w jednej
 
-console.log(`${plName} => ${lat} ${lng}`);
+const calcSum = (...nums)=>{
+    return nums.reduce((acc, num)=> acc + num, 0)
+} //tworze funkcje, ktora przyjmuje limitless argumentow i zwraca ich sume
+
+console.log(calcSum(1, 2, 3, 4, 5));

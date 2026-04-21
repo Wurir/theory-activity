@@ -1,18 +1,21 @@
 class Person {
-    constructor({name, age = 0}){
+    constructor(name,) {
         this.name = name
-        this.age = age
+        this.lang = null
     }
 
-    getName(){
+    getName() {
         return this.name
-    }
-    setName(name){
-        this.name = name
     }
 }
 
-const person = new Person({name: 'Bartek', age : 32})
-person.setName('Bartosz Bogdanowicz')
+class Polish extends Person { // tworze klase Polish, ktora dziedziczy (extends) właściwości oraz metody z klasy Person
+    constructor(name) {
+        super(name) // super to łącznik pomiedzy klasa dziedziczona, a rodzicem. Jest niezbedny do odwolania sie do właściwosci i metod z dziedziczonej klasy
+        this.lang = 'pl'
+    }
+}
 
-console.log(person.getName())
+const polish = new Person('Bartek Bogdanowicz')
+
+console.log(polish.getName())

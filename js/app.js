@@ -1,21 +1,18 @@
-class Person {
-    constructor(name,) {
-        this.name = name
-        this.lang = null
+class Square{
+    constructor(a, b) {
+        this.a = a
+        this.b = b
     }
-
-    getName() {
-        return this.name
-    }
+    getArea(){ return this.a * this.b}
 }
 
-class Polish extends Person { // tworze klase Polish, ktora dziedziczy (extends) właściwości oraz metody z klasy Person
-    constructor(name) {
-        super(name) // super to łącznik pomiedzy klasa dziedziczona, a rodzicem. Jest niezbedny do odwolania sie do właściwosci i metod z dziedziczonej klasy
-        this.lang = 'pl'
+class Cube extends Square{
+    constructor(a, b, c){
+        super(a, b)
+        this.c = c
     }
+    getArea(){ return super.getArea() * this.c}
 }
 
-const polish = new Person('Bartek Bogdanowicz')
-
-console.log(polish.getName())
+const cube1 = new Cube(1, 2, 3)
+console.log(cube1.getArea()); // 6

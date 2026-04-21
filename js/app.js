@@ -1,17 +1,17 @@
-const fn1 = function(a, b ='bbb', c = 12){
-    console.log (a, b, c)
+const Car = function(){
+
+}
+// konstruktorow nie tworzymy za pomoca fn strzalkowych
+
+class Person {
+
 }
 
-const fn2 = (a, b, c = 12) => {
-    console.log(a, b, c)
-}
+// nowy zapis ES6
 
-fn1() // undefined 'bbb' 12
-fn2(47) // 47 udefined 12
+console.log(
+    typeof Car, //fn
+    typeof Person //fn
+);
 
-const obj = {name: 'Bartek'}
-const {name, age = 32} = obj
-console.log(name, age); // Bartek 32
-
-
-//przypisuje wartosci do zmiennych, ktorych waretosc nie zostala okreslona
+//dowod ze to ciagle to samo

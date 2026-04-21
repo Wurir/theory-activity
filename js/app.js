@@ -1,17 +1,12 @@
-const Car = function(){
-
-}
-// konstruktorow nie tworzymy za pomoca fn strzalkowych
-
 class Person {
 
 }
 
-// nowy zapis ES6
+const person1 = new Person()
+const person2 = new Person()
+const person3 = new Person()
 
 console.log(
-    typeof Car, //fn
-    typeof Person //fn
+    typeof person1, //object
+    person1 === person2 //false
 );
-
-//dowod ze to ciagle to samo
